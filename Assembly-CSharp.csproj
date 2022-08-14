@@ -71,7 +71,6 @@
     <Compile Include="Assets\Scirpts\Data\Informations.cs" />
     <Compile Include="Assets\Scirpts\Base\XmlTool.cs" />
     <Compile Include="Assets\Scirpts\Start\MenuManager.cs" />
-    <Compile Include="Assets\Scirpts\SelectKing\KingBtn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Data\MOD01\kings.xml" />

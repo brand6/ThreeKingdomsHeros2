@@ -7,14 +7,14 @@ public class ButtonHandle : MonoBehaviour
 {
     public Text btnText;
     public string btnName;
-	private int btnIndex;
-	private bool mouseIn;
+	public int btnIndex;
+	protected bool mouseIn;
 
 	public int BtnIndex { get => btnIndex; set => btnIndex = value; }
 
 	private void Awake()
     {
-		setText(btnName);
+		SetText(btnName);
 	}
 
 	private void Update()
@@ -25,7 +25,7 @@ public class ButtonHandle : MonoBehaviour
 		}
 	}
 
-	public void setText(string text)
+	public void SetText(string text)
 	{
 		btnText.text = text;
 	}
@@ -43,5 +43,10 @@ public class ButtonHandle : MonoBehaviour
         btnText.color = Color.white;
 		mouseIn = false;
 
+	}
+
+	public void KingSelectBtnClick()
+	{
+		SelectKingManager.Instance.ShowKingInfo(btnIndex);
 	}
 }
