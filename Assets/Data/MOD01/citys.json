@@ -1,0 +1,482 @@
+[
+  {
+    "index": 0,
+    "name": "襄平",
+    "king": -1,
+    "population": 77000,
+    "money": 2827,
+    "reservistMax": 140,
+    "reservist": 0,
+    "defense": 369
+  },
+  {
+    "index": 1,
+    "name": "北平",
+    "king": 5,
+    "population": 90000,
+    "money": 2925,
+    "reservistMax": 146,
+    "reservist": 0,
+    "defense": 252
+  },
+  {
+    "index": 2,
+    "name": "代县",
+    "king": 6,
+    "population": 172739,
+    "money": 3472,
+    "reservistMax": 179,
+    "reservist": 0,
+    "defense": 321
+  },
+  {
+    "index": 3,
+    "name": "晋阳",
+    "king": -1,
+    "population": 88000,
+    "money": 2910,
+    "reservistMax": 145,
+    "reservist": 0,
+    "defense": 300
+  },
+  {
+    "index": 4,
+    "name": "南皮",
+    "king": 1,
+    "population": 355340,
+    "money": 4822,
+    "reservistMax": 252,
+    "reservist": 0,
+    "defense": 439
+  },
+  {
+    "index": 5,
+    "name": "平原",
+    "king": 1,
+    "population": 330000,
+    "money": 4725,
+    "reservistMax": 242,
+    "reservist": 0,
+    "defense": 365
+  },
+  {
+    "index": 6,
+    "name": "邺",
+    "king": 7,
+    "population": 214229,
+    "money": 3795,
+    "reservistMax": 195,
+    "reservist": 0,
+    "defense": 312
+  },
+  {
+    "index": 7,
+    "name": "北海",
+    "king": 8,
+    "population": 129646,
+    "money": 3135,
+    "reservistMax": 161,
+    "reservist": 0,
+    "defense": 320
+  },
+  {
+    "index": 8,
+    "name": "濮阳",
+    "king": 9,
+    "population": 167000,
+    "money": 3502,
+    "reservistMax": 176,
+    "reservist": 0,
+    "defense": 227
+  },
+  {
+    "index": 9,
+    "name": "陈留",
+    "king": 1,
+    "population": 221000,
+    "money": 3907,
+    "reservistMax": 198,
+    "reservist": 0,
+    "defense": 206
+  },
+  {
+    "index": 10,
+    "name": "洛阳",
+    "king": 0,
+    "population": 425000,
+    "money": 5437,
+    "reservistMax": 280,
+    "reservist": 0,
+    "defense": 500
+  },
+  {
+    "index": 11,
+    "name": "弘农",
+    "king": 0,
+    "population": 142000,
+    "money": 3315,
+    "reservistMax": 166,
+    "reservist": 0,
+    "defense": 232
+  },
+  {
+    "index": 12,
+    "name": "长安",
+    "king": 0,
+    "population": 308093,
+    "money": 4492,
+    "reservistMax": 233,
+    "reservist": 0,
+    "defense": 513
+  },
+  {
+    "index": 13,
+    "name": "安定",
+    "king": -1,
+    "population": 89000,
+    "money": 2917,
+    "reservistMax": 145,
+    "reservist": 0,
+    "defense": 245
+  },
+  {
+    "index": 14,
+    "name": "天水",
+    "king": -1,
+    "population": 121000,
+    "money": 3157,
+    "reservistMax": 158,
+    "reservist": 0,
+    "defense": 373
+  },
+  {
+    "index": 15,
+    "name": "西凉",
+    "king": 3,
+    "population": 160000,
+    "money": 3450,
+    "reservistMax": 174,
+    "reservist": 0,
+    "defense": 515
+  },
+  {
+    "index": 16,
+    "name": "下邳",
+    "king": 2,
+    "population": 167000,
+    "money": 3502,
+    "reservistMax": 176,
+    "reservist": 0,
+    "defense": 140
+  },
+  {
+    "index": 17,
+    "name": "徐州",
+    "king": 10,
+    "population": 188000,
+    "money": 3660,
+    "reservistMax": 185,
+    "reservist": 0,
+    "defense": 106
+  },
+  {
+    "index": 18,
+    "name": "许昌",
+    "king": 1,
+    "population": 321000,
+    "money": 4657,
+    "reservistMax": 238,
+    "reservist": 0,
+    "defense": 429
+  },
+  {
+    "index": 19,
+    "name": "谯",
+    "king": 11,
+    "population": 233000,
+    "money": 3997,
+    "reservistMax": 206,
+    "reservist": 0,
+    "defense": 305
+  },
+  {
+    "index": 20,
+    "name": "汝南",
+    "king": 1,
+    "population": 251000,
+    "money": 4132,
+    "reservistMax": 210,
+    "reservist": 0,
+    "defense": 137
+  },
+  {
+    "index": 21,
+    "name": "宛",
+    "king": 1,
+    "population": 325000,
+    "money": 4687,
+    "reservistMax": 240,
+    "reservist": 0,
+    "defense": 317
+  },
+  {
+    "index": 22,
+    "name": "新野",
+    "king": 4,
+    "population": 213000,
+    "money": 3847,
+    "reservistMax": 195,
+    "reservist": 0,
+    "defense": 207
+  },
+  {
+    "index": 23,
+    "name": "襄阳",
+    "king": -1,
+    "population": 370566,
+    "money": 4950,
+    "reservistMax": 258,
+    "reservist": 0,
+    "defense": 345
+  },
+  {
+    "index": 24,
+    "name": "上庸",
+    "king": -1,
+    "population": 254000,
+    "money": 4155,
+    "reservistMax": 211,
+    "reservist": 0,
+    "defense": 214
+  },
+  {
+    "index": 25,
+    "name": "江夏",
+    "king": -1,
+    "population": 132000,
+    "money": 3240,
+    "reservistMax": 162,
+    "reservist": 0,
+    "defense": 236
+  },
+  {
+    "index": 26,
+    "name": "江陵",
+    "king": -1,
+    "population": 233000,
+    "money": 3997,
+    "reservistMax": 203,
+    "reservist": 0,
+    "defense": 294
+  },
+  {
+    "index": 27,
+    "name": "武陵",
+    "king": -1,
+    "population": 109000,
+    "money": 3067,
+    "reservistMax": 153,
+    "reservist": 0,
+    "defense": 175
+  },
+  {
+    "index": 28,
+    "name": "长沙",
+    "king": -1,
+    "population": 224000,
+    "money": 3930,
+    "reservistMax": 199,
+    "reservist": 0,
+    "defense": 473
+  },
+  {
+    "index": 29,
+    "name": "桂阳",
+    "king": -1,
+    "population": 174000,
+    "money": 3555,
+    "reservistMax": 179,
+    "reservist": 0,
+    "defense": 121
+  },
+  {
+    "index": 30,
+    "name": "零陵",
+    "king": -1,
+    "population": 225000,
+    "money": 3937,
+    "reservistMax": 200,
+    "reservist": 0,
+    "defense": 132
+  },
+  {
+    "index": 31,
+    "name": "寿春",
+    "king": 12,
+    "population": 154000,
+    "money": 3405,
+    "reservistMax": 171,
+    "reservist": 0,
+    "defense": 182
+  },
+  {
+    "index": 32,
+    "name": "建业",
+    "king": -1,
+    "population": 290000,
+    "money": 4425,
+    "reservistMax": 226,
+    "reservist": 0,
+    "defense": 420
+  },
+  {
+    "index": 33,
+    "name": "吴",
+    "king": 13,
+    "population": 232000,
+    "money": 3990,
+    "reservistMax": 202,
+    "reservist": 0,
+    "defense": 336
+  },
+  {
+    "index": 34,
+    "name": "会稽",
+    "king": -1,
+    "population": 139000,
+    "money": 3292,
+    "reservistMax": 165,
+    "reservist": 0,
+    "defense": 160
+  },
+  {
+    "index": 35,
+    "name": "庐江",
+    "king": -1,
+    "population": 170000,
+    "money": 3525,
+    "reservistMax": 178,
+    "reservist": 0,
+    "defense": 203
+  },
+  {
+    "index": 36,
+    "name": "予章",
+    "king": -1,
+    "population": 213000,
+    "money": 3847,
+    "reservistMax": 195,
+    "reservist": 0,
+    "defense": 233
+  },
+  {
+    "index": 37,
+    "name": "汉中",
+    "king": -1,
+    "population": 181000,
+    "money": 3607,
+    "reservistMax": 182,
+    "reservist": 0,
+    "defense": 502
+  },
+  {
+    "index": 38,
+    "name": "下弁",
+    "king": -1,
+    "population": 115000,
+    "money": 3112,
+    "reservistMax": 156,
+    "reservist": 0,
+    "defense": 211
+  },
+  {
+    "index": 39,
+    "name": "梓潼",
+    "king": -1,
+    "population": 235000,
+    "money": 4012,
+    "reservistMax": 204,
+    "reservist": 0,
+    "defense": 306
+  },
+  {
+    "index": 40,
+    "name": "成都",
+    "king": -1,
+    "population": 308000,
+    "money": 4560,
+    "reservistMax": 233,
+    "reservist": 0,
+    "defense": 284
+  },
+  {
+    "index": 41,
+    "name": "永安",
+    "king": -1,
+    "population": 236000,
+    "money": 4020,
+    "reservistMax": 204,
+    "reservist": 0,
+    "defense": 268
+  },
+  {
+    "index": 42,
+    "name": "江州",
+    "king": -1,
+    "population": 211000,
+    "money": 3832,
+    "reservistMax": 194,
+    "reservist": 0,
+    "defense": 162
+  },
+  {
+    "index": 43,
+    "name": "建宁",
+    "king": -1,
+    "population": 176000,
+    "money": 3570,
+    "reservistMax": 180,
+    "reservist": 0,
+    "defense": 193
+  },
+  {
+    "index": 44,
+    "name": "云南",
+    "king": -1,
+    "population": 303000,
+    "money": 4522,
+    "reservistMax": 231,
+    "reservist": 0,
+    "defense": 375
+  },
+  {
+    "index": 45,
+    "name": "庐陵",
+    "king": -1,
+    "population": 149000,
+    "money": 3367,
+    "reservistMax": 169,
+    "reservist": 0,
+    "defense": 112
+  },
+  {
+    "index": 46,
+    "name": "鄱阳",
+    "king": -1,
+    "population": 166000,
+    "money": 3495,
+    "reservistMax": 176,
+    "reservist": 0,
+    "defense": 244
+  },
+  {
+    "index": 47,
+    "name": "夷州",
+    "king": -1,
+    "population": 62000,
+    "money": 2715,
+    "reservistMax": 134,
+    "reservist": 0,
+    "defense": 108
+  }
+]

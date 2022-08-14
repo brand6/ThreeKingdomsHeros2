@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class GameManager : BaseSingletonMono<GameManager>
 {
@@ -7,7 +8,8 @@ public class GameManager : BaseSingletonMono<GameManager>
 	{
 		base.Awake();
 		SoundManager.Instance.PlayBgMusic("Music01");
+		DontDestroyOnLoad(gameObject);
 	}
 
-	
+
 }

@@ -5,8 +5,11 @@ using UnityEngine;
 public class BaseSingletonMono<T> : MonoBehaviour where T:MonoBehaviour
 {
 	private static T instance;
+
+	public static T Instance { get => instance; set => instance = value; }
+
 	protected virtual void Awake()
 	{
-		instance = this as T;
+		Instance = this as T;
 	}
 }
