@@ -8,6 +8,7 @@ public class SliderButton : MonoBehaviour
 	public Slider slider;
 	public bool isAdd;
 
+	//音量控制条两侧的按钮效果
 	public void onButtonClick()
 	{
 		if (isAdd)

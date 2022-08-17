@@ -11,9 +11,7 @@ public class LoadScene : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-
 		fadeRender = gameObject.GetComponent<SpriteRenderer>();
-
 	}
 
     // Update is called once per frame
@@ -31,6 +29,10 @@ public class LoadScene : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// 渐隐后加载新场景
+	/// </summary>
+	/// <param name="_sceneName"></param>
 	public void LoadNewScene(string _sceneName)
 	{
 		fadeTime = 0f;

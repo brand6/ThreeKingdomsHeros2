@@ -10,6 +10,68 @@ public class King
 	public int active;
 	public int generalIdx;
 
+	private List<City> citys = new List<City>();
+	public List<General> Generals
+	{
+		get
+		{
+			List<General> generals = new List<General>();
+			for (int i = 0; i < citys.Count; ++i)
+			{
+				generals.AddRange(citys[i].getGenerals());
+			}
+			return generals;
+		}
+	}
+
+	public int SoldierNum
+	{
+		get
+		{
+			int num = 0;
+			for (int i = 0; i < citys.Count; ++i)
+			{
+				num += citys[i].SoldiersNum;
+			}
+			return num;
+		}
+	}
+
+	public int Money
+	{
+		get
+		{
+			int num = 0;
+			for (int i = 0; i < citys.Count; ++i)
+			{
+				num += citys[i].money;
+			}
+			return num;
+		}
+	}
+
+	public int Population
+	{
+		get
+		{
+			int num = 0;
+			for (int i = 0; i < citys.Count; ++i)
+			{
+				num += citys[i].population;
+			}
+			return num;
+		}
+	}
+
+	public List<City> GetCitys()
+	{
+		return citys;
+	}
+
+	public void AddCity(City city)
+	{
+		citys.Add(city);
+	}
 }
 
 
@@ -23,16 +85,32 @@ public class City
 	public int reservistMax;
 	public int reservist;
 	public int defense;
-	public List<int> objects;
-	public List<int> generals;
-	public List<int> prisons;
+	
+	private List<Equipment> objects;
+	private List<General> generals = new List<General>();
+	private List<General> prisons;
 
 	public int SoldiersNum
 	{
 		get
 		{
-			return 0;
+			int num = 0;
+			for (int i = 0; i < generals.Count; ++i)
+			{
+				num += generals[i].soldierCur;
+			}
+			return num;
 		}
+	}
+
+	public List<General> getGenerals()
+	{
+		return generals;
+	}
+
+	public void AddGeneral(General general)
+	{
+		generals.Add(general);
 	}
 }
 
@@ -40,6 +118,8 @@ public class City
 public class General
 {
 	public int index;
+	public string name;
+	public int head;
 	public int king = -1;
 	public int city = -1;
 	public int magic0;
