@@ -1,0 +1,86 @@
+[
+  {
+    "index": 0,
+    "name": "曹操",
+    "active": 1,
+    "generalIdx": 98
+  },
+  {
+    "index": 1,
+    "name": "刘备",
+    "active": 1,
+    "generalIdx": 134
+  },
+  {
+    "index": 2,
+    "name": "孙权",
+    "active": 1,
+    "generalIdx": 61
+  },
+  {
+    "index": 3,
+    "name": "袁绍",
+    "active": 1,
+    "generalIdx": 71
+  },
+  {
+    "index": 4,
+    "name": "马腾",
+    "active": 1,
+    "generalIdx": 79
+  },
+  {
+    "index": 5,
+    "name": "刘表",
+    "active": 1,
+    "generalIdx": 132
+  },
+  {
+    "index": 6,
+    "name": "刘璋",
+    "active": 1,
+    "generalIdx": 196
+  },
+  {
+    "index": 7,
+    "name": "张鲁",
+    "active": 1,
+    "generalIdx": 90
+  },
+  {
+    "index": null,
+    "name": null,
+    "active": null,
+    "generalIdx": null
+  },
+  {
+    "index": null,
+    "name": null,
+    "active": null,
+    "generalIdx": null
+  },
+  {
+    "index": null,
+    "name": null,
+    "active": null,
+    "generalIdx": null
+  },
+  {
+    "index": null,
+    "name": null,
+    "active": null,
+    "generalIdx": null
+  },
+  {
+    "index": null,
+    "name": null,
+    "active": null,
+    "generalIdx": null
+  },
+  {
+    "index": null,
+    "name": null,
+    "active": null,
+    "generalIdx": null
+  }
+]

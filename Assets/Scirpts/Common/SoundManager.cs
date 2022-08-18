@@ -12,7 +12,7 @@ public class SoundManager : BaseManager<SoundManager>
 	private AudioSource musicSource; //音乐资源
 	private string curMusic; //当前播放的音乐
 
-	private Dictionary<string, GameObject> soundDict = new Dictionary<string, GameObject>();
+	private Dictionary<string, GameObject> soundDict;
 	private GameObject sounds; //存放所有音效的父对象
 	private GameObject soundGO; //音效对象
 	private AudioSource soundSource; //音效资源
@@ -58,10 +58,17 @@ public class SoundManager : BaseManager<SoundManager>
 	/// <returns>声音对象</returns>
 	private GameObject GetSoundObj(string soundName)
 	{
+		if (soundDict == null)
+		{
+			soundDict = new Dictionary<string, GameObject>();
+		}
 		if (soundDict.ContainsKey(soundName)) return soundDict[soundName];
 		else
 		{
-			if (sounds == null) sounds = new GameObject("sounds");
+			if (sounds == null) {
+				sounds = new GameObject("sounds");
+				Object.DontDestroyOnLoad(sounds);
+			}
 
 			GameObject soundObj = new GameObject(soundName);
 			soundObj.transform.SetParent(sounds.transform);

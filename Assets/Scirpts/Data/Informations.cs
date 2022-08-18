@@ -8,9 +8,9 @@ public class Informations: BaseManager<Informations>
 	private King[] kings;
 	private City[] citys;
 	private General[] generals;
-	//private Equipment[] equipments;
+	private int playerKingIndex;
 
-	private static List<Magic> magics;
+	public int PlayerKingIndex { get => playerKingIndex; set => playerKingIndex = value; }
 
 
 	/// <summary>
@@ -47,7 +47,6 @@ public class Informations: BaseManager<Informations>
 			}
 		}
 	}
-
 
 	public King[] getKings()
 	{

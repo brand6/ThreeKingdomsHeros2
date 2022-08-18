@@ -57,27 +57,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scirpts\Common\LoadScene.cs" />
-    <Compile Include="Assets\Scirpts\Start\SliderButton.cs" />
-    <Compile Include="Assets\Scirpts\SelectKing\SelectKingManager.cs" />
+    <Compile Include="Assets\Scirpts\UI\SliderButton.cs" />
+    <Compile Include="Assets\Scirpts\UI\SelectKingControl.cs" />
     <Compile Include="Assets\Scirpts\Base\PoolManager.cs" />
+    <Compile Include="Assets\Scirpts\UI\KingInfoPanelManager.cs" />
     <Compile Include="Assets\Scirpts\Data\SaveAndLoadData.cs" />
     <Compile Include="Assets\Scirpts\Base\BaseManager.cs" />
     <Compile Include="Assets\Scirpts\Base\BaseSingletonMono.cs" />
-    <Compile Include="Assets\Scirpts\Common\ButtonHandle.cs" />
+    <Compile Include="Assets\Scirpts\UI\ButtonHandle.cs" />
     <Compile Include="Assets\Scirpts\Data\DataDefine.cs" />
     <Compile Include="Assets\Scirpts\Base\JsonTool.cs" />
-    <Compile Include="Assets\Scirpts\Common\GameManager.cs" />
     <Compile Include="Assets\Scirpts\Common\SoundManager.cs" />
     <Compile Include="Assets\Scirpts\Data\Informations.cs" />
     <Compile Include="Assets\Scirpts\Base\XmlTool.cs" />
-    <Compile Include="Assets\Scirpts\Start\MenuManager.cs" />
-    <Compile Include="Assets\KingInfoPanelManager.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Data\MOD01\kings.xml" />
-    <None Include="Assets\Data\MOD01\citys.xml" />
-    <None Include="Assets\Data\MOD01\magics.xml" />
-    <None Include="Assets\Data\MOD01\generals.xml" />
+    <Compile Include="Assets\Scirpts\UI\StartSceneControl.cs" />
+    <Compile Include="Assets\Scirpts\UI\InternalAffairsControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

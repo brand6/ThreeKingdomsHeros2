@@ -1,0 +1,110 @@
+[
+  {
+    "index": 0,
+    "name": "曹操",
+    "active": 1,
+    "generalIdx": 98
+  },
+  {
+    "index": 1,
+    "name": "刘备",
+    "active": 1,
+    "generalIdx": 134
+  },
+  {
+    "index": 2,
+    "name": "孙坚",
+    "active": 1,
+    "generalIdx": 59
+  },
+  {
+    "index": 3,
+    "name": "董卓",
+    "active": 1,
+    "generalIdx": 121
+  },
+  {
+    "index": 4,
+    "name": "袁绍",
+    "active": 1,
+    "generalIdx": 71
+  },
+  {
+    "index": 5,
+    "name": "袁术",
+    "active": 1,
+    "generalIdx": 72
+  },
+  {
+    "index": 6,
+    "name": "公孙瓒",
+    "active": 1,
+    "generalIdx": 3
+  },
+  {
+    "index": 7,
+    "name": "韩馥",
+    "active": 1,
+    "generalIdx": 156
+  },
+  {
+    "index": 8,
+    "name": "孔融",
+    "active": 1,
+    "generalIdx": 7
+  },
+  {
+    "index": 9,
+    "name": "乔瑁",
+    "active": 1,
+    "generalIdx": 189
+  },
+  {
+    "index": 10,
+    "name": "马腾",
+    "active": 1,
+    "generalIdx": 79
+  },
+  {
+    "index": 11,
+    "name": "陶谦",
+    "active": 1,
+    "generalIdx": 110
+  },
+  {
+    "index": 12,
+    "name": "孔岫",
+    "active": 1,
+    "generalIdx": 6
+  },
+  {
+    "index": 13,
+    "name": "刘表",
+    "active": 1,
+    "generalIdx": 132
+  },
+  {
+    "index": 14,
+    "name": "刘繇",
+    "active": 1,
+    "generalIdx": 137
+  },
+  {
+    "index": 15,
+    "name": "严白虎",
+    "active": 1,
+    "generalIdx": 167
+  },
+  {
+    "index": 16,
+    "name": "王朗",
+    "active": 1,
+    "generalIdx": 172
+  },
+  {
+    "index": 17,
+    "name": "刘焉",
+    "active": 1,
+    "generalIdx": 133
+  }
+]

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SelectKing.unity
     guid: 25f0b644b68555d4a9713744f919c73c
+  - enabled: 1
+    path: Assets/Scenes/InternalAffairs.unity
+    guid: 4ccd529fa150ebe4999245d70141bc91
   m_configObjects: {}
