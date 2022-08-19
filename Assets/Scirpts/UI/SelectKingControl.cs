@@ -46,6 +46,7 @@ public class SelectKingControl:MonoBehaviour
     public void LoadModeData(int index)
     {
         LoadScene.GetComponent<LoadScene>().ShowNewUI(SelectKing);
+        ChangeBtnColor(ModScrollContent, index);
         SelectMod.SetActive(false);
         string modFolder = Informations.Instance.Mods[index].folder;
         Informations.Instance.LoadData(modFolder);
@@ -67,15 +68,14 @@ public class SelectKingControl:MonoBehaviour
     /// <summary>
     /// 改变选中君主按钮的颜色
     /// </summary>
-    public void ChangeBtnColor()
+    public void ChangeBtnColor(GameObject ScrollContent,int index)
 	{
-        ButtonHandle[] btnHs = KingScrollContent.GetComponentsInChildren<ButtonHandle>();
+        ButtonHandle[] btnHs = ScrollContent.GetComponentsInChildren<ButtonHandle>();
         for (int i = 0; i < btnHs.Length; ++i)
 		{
-            if (btnHs[i].BtnIndex == selectKingIndex)
+            if (btnHs[i].BtnIndex == index)
 			{
                 btnHs[i].BtnSelect();
-
             }
 			else
 			{
@@ -92,7 +92,7 @@ public class SelectKingControl:MonoBehaviour
     public void ShowKingInfo(int kingIndex)
 	{
         selectKingIndex = kingIndex;
-        ChangeBtnColor();
+        ChangeBtnColor(KingScrollContent, kingIndex);
         ChangeMapStatus();
         King king = Informations.Instance.getKing(kingIndex);
         kingInfoUI.setKingHead(king.generalIdx + 1);
@@ -133,8 +133,16 @@ public class SelectKingControl:MonoBehaviour
     /// </summary>
     public void BackToStartScene()
 	{
-        LoadScene.SetActive(true);
-        LoadScene.GetComponent<LoadScene>().LoadNewScene("StartScene");
+        if (SelectMod.activeInHierarchy)
+        {
+            LoadScene.SetActive(true);
+            LoadScene.GetComponent<LoadScene>().LoadNewScene("StartScene");
+        }        
+        else
+		{
+            LoadScene.GetComponent<LoadScene>().ShowNewUI(SelectMod);
+            SelectKing.SetActive(false);
+        }
     }
 
     /// <summary>

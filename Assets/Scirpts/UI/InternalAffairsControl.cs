@@ -7,6 +7,7 @@ public class InternalAffairsControl : MonoBehaviour
 {
     public Button ReturnToStartBtn;
 	public GameObject LoadSeceneObj;
+	public Text Year;
 
 	private void Awake()
 	{
