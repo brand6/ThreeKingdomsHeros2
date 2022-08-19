@@ -47,11 +47,12 @@ def xlFileToJsonFile(app, dataFloder, xlFloder, xlFoldName, xlName):
                 # shtMap = {}
                 mapList = []
                 for r in range(titleLine + 1, len(usedList)):  # 第4行开始正式数据
-                    lineMap = {}
-                    for c in range(len(titleList)):
-                        if titleList[c] is not None:
-                            lineMap[titleList[c]] = tryNum(usedList[r][c])
-                    mapList.append(lineMap)
+                    if usedList[r][0] is not None:
+                        lineMap = {}
+                        for c in range(len(titleList)):
+                            if titleList[c] is not None:
+                                lineMap[titleList[c]] = tryNum(usedList[r][c])
+                        mapList.append(lineMap)
                 dataMap[sht.name] = mapList
 
         if not os.path.exists(jsonFolder):

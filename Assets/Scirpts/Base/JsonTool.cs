@@ -76,7 +76,15 @@ public class JsonTool
 	static string GetJsonString(string folderName, string fileName, bool isSave = false)
 	{
 		string filePath = isSave ? savePath : dataPath;
-		filePath = Path.Combine(filePath, folderName, fileName + ".json");
+		if (folderName is null)
+		{
+			filePath = Path.Combine(filePath, fileName + ".json");
+		}
+		else 
+		{ 
+			filePath = Path.Combine(filePath, folderName, fileName + ".json"); 
+		}
+
 		if (!File.Exists(filePath)) return null;
 		return File.ReadAllText(filePath);
 	}

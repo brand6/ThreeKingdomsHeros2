@@ -20,9 +20,9 @@ public class SaveAndLoadData
 	/// </summary>
 	/// <param name="modName"></param>
 	/// <returns></returns>
-	public static T LoadModData<T>(string modName,string fileName)
+	public static T LoadModData<T>(string modFolder, string fileName)
 	{
-		return JsonTool.LoadDataByLitJson<T>(modName, fileName, false);
+		return JsonTool.LoadDataByLitJson<T>(modFolder, fileName, false);
 	}
 
 

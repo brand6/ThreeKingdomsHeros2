@@ -5,96 +5,95 @@ using UnityEngine;
 [System.Serializable]
 public class Informations: BaseManager<Informations>
 {
+	private Mod[] mods;
 	private King[] kings;
 	private City[] citys;
 	private General[] generals;
 	private int playerKingIndex;
 
 	public int PlayerKingIndex { get => playerKingIndex; set => playerKingIndex = value; }
+    public Mod[] Mods { get => mods; }
+    public King[] Kings { get => kings; }
+    public City[] Citys { get => citys;}
+    public General[] Generals { get => generals; }
 
 
-	/// <summary>
-	/// 加载mod数据
-	/// </summary>
-	/// <param name="modName"></param>
-	public void LoadData(string modName)
+    /// <summary>
+    /// 加载mod数据
+    /// </summary>
+    /// <param name="modName"></param>
+    public void LoadData(string modFolder)
 	{
-		kings = SaveAndLoadData.LoadModData<King[]>(modName, "kings");
-		citys = SaveAndLoadData.LoadModData<City[]>(modName, "citys");
-		generals = SaveAndLoadData.LoadModData<General[]>(modName, "generals");
+		kings = SaveAndLoadData.LoadModData<King[]>(modFolder, "kings");
+		citys = SaveAndLoadData.LoadModData<City[]>(modFolder, "citys");
+		generals = SaveAndLoadData.LoadModData<General[]>(modFolder, "generals");
 		//更新城市内的武将列表
-		for(int i = 0; i < generals.Length; ++i)
+		for(int i = 0; i < Generals.Length; ++i)
 		{
-			for (int j = 0; j < citys.Length; ++j)
+			for (int j = 0; j < Citys.Length; ++j)
 			{
-				if (generals[i].city == citys[j].index)
+				if (Generals[i].city == Citys[j].index)
 				{
-					citys[j].AddGeneral(generals[i]);
+					Citys[j].AddGeneral(Generals[i]);
 					break;
 				}
 			}
 		}
 		//更新君主的城市列表
-		for (int i = 0; i < citys.Length; ++i)
+		for (int i = 0; i < Citys.Length; ++i)
 		{
-			for (int j = 0; j < kings.Length; ++j)
+			for (int j = 0; j < Kings.Length; ++j)
 			{
-				if (citys[i].king == kings[j].index)
+				if (Citys[i].king == Kings[j].index)
 				{
-					kings[j].AddCity(citys[i]);
+					Kings[j].AddCity(Citys[i]);
 					break;
 				}
 			}
 		}
 	}
 
-	public King[] getKings()
-	{
-		return kings;
+	/// <summary>
+	/// 加载mod列表
+	/// </summary>
+	public Mod[] LoadModList()
+    {
+		mods = SaveAndLoadData.LoadModData<Mod[]>(null, "mods");
+		return Mods;
 	}
+
 
 	public King getKing(int index)
 	{
-		for (int i = 0; i < kings.Length; ++i)
+		for (int i = 0; i < Kings.Length; ++i)
 		{
-			if (index == kings[i].index)
+			if (index == Kings[i].index)
 			{
-				return kings[i];
+				return Kings[i];
 			}
 		}
 		return null;
-	}
-
-	public City[] getCitys()
-	{
-		return citys;
 	}
 
 	public City getCity(int index)
 	{
-		for (int i = 0; i < citys.Length; ++i)
+		for (int i = 0; i < Citys.Length; ++i)
 		{
-			if (index == citys[i].index)
+			if (index == Citys[i].index)
 			{
-				return citys[i];
+				return Citys[i];
 			}
 		}
 		return null;
 	}
 
-
-	public General[] getGenerals()
-	{
-		return generals;
-	}
-
 	public General getGeneral(int index)
 	{
-		for (int i = 0; i < generals.Length; ++i)
+		for (int i = 0; i < Generals.Length; ++i)
 		{
-			if (index == generals[i].index)
+			if (index == Generals[i].index)
 			{
-				return generals[i];
+				return Generals[i];
 			}
 		}
 		return null;

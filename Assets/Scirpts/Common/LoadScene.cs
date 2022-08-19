@@ -38,4 +38,15 @@ public class LoadScene : MonoBehaviour
 		fadeTime = 0f;
 		sceneName = _sceneName;
 	}
+
+
+	/// <summary>
+	/// 渐隐后显示新的UI内容
+	/// </summary>
+	/// <param name="obj"></param>
+	public void ShowNewUI(GameObject obj)
+    {
+		fadeTime = 0f;
+		obj.SetActive(true);
+	}
 }

@@ -6,14 +6,17 @@ using UnityEngine.UI;
 public class SelectKingControl:MonoBehaviour
 {
     public Button backBtn;
-    public Button confirmBtn;
     public GameObject LoadScene;
-    public GameObject ScrollContent;
+    public GameObject SelectMod;
+    public GameObject ModScrollContent;
+    public GameObject SelectKing;
+    public GameObject KingScrollContent;
     public GameObject buttonPrefab;
     public GameObject map;
+    public Button confirmBtn;
     public KingInfoPanelManager kingInfoUI;
+    
     private int selectKingIndex;
-
     private static SelectKingControl instance;
 	public static SelectKingControl Instance { get => instance;}
 
@@ -23,9 +26,30 @@ public class SelectKingControl:MonoBehaviour
         backBtn.onClick.AddListener(BackToStartScene);
         confirmBtn.onClick.AddListener(EnterAffairsScene);
 
-        //加载mod数据
-        Informations.Instance.LoadData("MOD1");
-        King[] kings = Informations.Instance.getKings();
+        Mod[] mods = Informations.Instance.LoadModList();
+        for(int i = 0; i < mods.Length; ++i)
+        {
+            GameObject obj = Instantiate(buttonPrefab);
+            ButtonHandle btnH = obj.GetComponent<ButtonHandle>();
+            btnH.SetText(mods[i].name);
+            btnH.BtnIndex = i;
+            obj.transform.SetParent(ModScrollContent.transform);
+            Button btn = obj.GetComponent<Button>();
+            btn.onClick.AddListener(btnH.ModSelectBtnClick);
+        }
+    }
+
+    /// <summary>
+    /// 加载mod数据
+    /// </summary>
+    /// <param name="modIndex"></param>
+    public void LoadModeData(int index)
+    {
+        LoadScene.GetComponent<LoadScene>().ShowNewUI(SelectKing);
+        SelectMod.SetActive(false);
+        string modFolder = Informations.Instance.Mods[index].folder;
+        Informations.Instance.LoadData(modFolder);
+        King[] kings = Informations.Instance.Kings;
         ShowKingInfo(kings[0].index);
         //创建选择君主下的列表按钮
         for (int i = 0; i < kings.Length; i++)
@@ -34,7 +58,7 @@ public class SelectKingControl:MonoBehaviour
             ButtonHandle btnH = obj.GetComponent<ButtonHandle>();
             btnH.SetText(kings[i].name);
             btnH.BtnIndex = kings[i].index;
-            obj.transform.SetParent(ScrollContent.transform);
+            obj.transform.SetParent(KingScrollContent.transform);
             Button btn = obj.GetComponent<Button>();
             btn.onClick.AddListener(btnH.KingSelectBtnClick);
         }
@@ -45,7 +69,7 @@ public class SelectKingControl:MonoBehaviour
     /// </summary>
     public void ChangeBtnColor()
 	{
-        ButtonHandle[] btnHs = ScrollContent.GetComponentsInChildren<ButtonHandle>();
+        ButtonHandle[] btnHs = KingScrollContent.GetComponentsInChildren<ButtonHandle>();
         for (int i = 0; i < btnHs.Length; ++i)
 		{
             if (btnHs[i].BtnIndex == selectKingIndex)

@@ -1,22 +1,27 @@
 [
   {
     "index": 1,
-    "name": "黄巾之乱"
+    "name": "黄巾之乱",
+    "folder": "MOD1"
   },
   {
     "index": 2,
-    "name": "群雄并起"
+    "name": "群雄并起",
+    "folder": "MOD2"
   },
   {
     "index": 3,
-    "name": "官渡之战"
+    "name": "官渡之战",
+    "folder": "MOD3"
   },
   {
     "index": 4,
-    "name": "赤壁之战"
+    "name": "赤壁之战",
+    "folder": "MOD4"
   },
   {
     "index": 5,
-    "name": "天下三分"
+    "name": "天下三分",
+    "folder": "MOD5"
   }
 ]

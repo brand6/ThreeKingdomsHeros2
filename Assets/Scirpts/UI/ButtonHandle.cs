@@ -85,4 +85,12 @@ public class ButtonHandle : MonoBehaviour
 	{
 		SelectKingControl.Instance.ShowKingInfo(btnIndex);
 	}
+
+	/// <summary>
+	/// 更新Mod信息
+	/// </summary>
+	public void ModSelectBtnClick()
+	{
+		SelectKingControl.Instance.LoadModeData(btnIndex);
+	}
 }

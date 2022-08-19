@@ -152,6 +152,13 @@ public class General
 }
 
 
+public class Mod
+{
+	public int index;
+	public string name;
+	public string folder;
+}
+
 public class Magic
 {
 	public int sequence;
