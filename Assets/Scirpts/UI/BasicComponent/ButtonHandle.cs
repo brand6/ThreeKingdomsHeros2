@@ -14,6 +14,11 @@ public class ButtonHandle : MonoBehaviour
 
 	public int BtnIndex { get => btnIndex; set => btnIndex = value; }
 
+	private void OnEnable()
+	{
+		btnText.color = Color.white;
+	}
+
 	private void Awake()
     {
 		SetText(btnName);
@@ -83,7 +88,7 @@ public class ButtonHandle : MonoBehaviour
 	/// </summary>
 	public void KingSelectBtnClick()
 	{
-		SelectKingControl.Instance.ShowKingInfo(btnIndex);
+		KingListPanelManager.Instance.ShowKingInfo(btnIndex);
 	}
 
 	/// <summary>

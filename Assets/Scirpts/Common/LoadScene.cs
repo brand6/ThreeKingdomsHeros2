@@ -8,13 +8,13 @@ public class LoadScene : MonoBehaviour
 	SpriteRenderer fadeRender;
 	float fadeTime = 0.5f;
 	private string sceneName;
-	// Start is called before the first frame update
+	private GameObject UIObj;
+
 	void Start()
     {
 		fadeRender = gameObject.GetComponent<SpriteRenderer>();
 	}
 
-    // Update is called once per frame
     void Update()
     {
 		if (fadeTime < 0.5f)
@@ -23,9 +23,14 @@ public class LoadScene : MonoBehaviour
 			fadeTime = Mathf.Clamp(fadeTime, 0f, 0.5f);
 			fadeRender.color = new Color(0, 0, 0, fadeTime * 2);
 		}
-		else
+		else 
 		{
-			SceneManager.LoadScene(sceneName);
+			if (sceneName != null) { SceneManager.LoadScene(sceneName); }
+			else 
+			{
+				if (UIObj != null) { UIObj.SetActive(true); }
+				gameObject.SetActive(false); 
+			}
 		}
 	}
 
@@ -46,7 +51,7 @@ public class LoadScene : MonoBehaviour
 	/// <param name="obj"></param>
 	public void ShowNewUI(GameObject obj)
     {
-		fadeTime = 0f;
-		obj.SetActive(true);
+		fadeTime = 0.3f;
+		UIObj = obj;
 	}
 }
