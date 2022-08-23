@@ -40,7 +40,7 @@ public class InternalAffairsControl : MonoBehaviour
 	{
 		if (Informations.Instance.Kings == null)
 		{
-			Informations.Instance.LoadData("MOD1");
+			Informations.Instance.LoadData("Record1",true);
 			Informations.Instance.PlayerKingIndex = 0;
 		}
 		ReturnBtn.onClick.AddListener(ReturnToMain);
@@ -105,8 +105,7 @@ public class InternalAffairsControl : MonoBehaviour
 	/// </summary>
 	public void OpenSaveUI()
 	{
-		LoadSceneObj.SetActive(true);
-		LoadSceneObj.GetComponent<LoadScene>().LoadNewScene("StartScene");
+		Informations.Instance.SaveData("Record1");
 	}
 
 }

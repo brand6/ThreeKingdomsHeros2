@@ -17,11 +17,8 @@ public class JsonTool
 	/// <param name="paths"></param>
 	public static void SaveDataByJsonUtility<T>(T obj,string folderName,string fileName)
 	{
-		string path = Path.Combine(savePath, folderName, fileName + ".json");
-		string directory = Path.GetDirectoryName(path);
-		if (!Directory.Exists(directory)) Directory.CreateDirectory(directory);
 		string objStr = JsonUtility.ToJson(obj);
-		File.WriteAllText(path, objStr);
+		SaveJsonString(objStr, folderName, fileName);
 	}
 
 	/// <summary>
@@ -61,9 +58,20 @@ public class JsonTool
 	public static T LoadDataByLitJson<T>(string folderName, string fileName, bool isSave = false)
 	{
 		string dataStr = GetJsonString(folderName, fileName, isSave);
+		return (dataStr is null) ? default(T) : JsonMapper.ToObject<T>(dataStr);
+	}
 
-		T itemData= JsonMapper.ToObject<T>(dataStr);
-		return itemData;
+	/// <summary>
+	/// 用LitJson将对象存储到json文件
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="obj"></param>
+	/// <param name="folderName"></param>
+	/// <param name="fileName"></param>
+	public static void SaveDataByLitJson<T>(T obj, string folderName, string fileName)
+	{
+		string dataStr = JsonMapper.ToJson(obj);
+		SaveJsonString(dataStr, folderName, fileName);
 	}
 
 	/// <summary>
@@ -87,6 +95,18 @@ public class JsonTool
 
 		if (!File.Exists(filePath)) return null;
 		return File.ReadAllText(filePath);
+	}
+
+	/// <summary>
+	/// 存储json文件
+	/// </summary>
+	/// <param name="str"></param>
+	static void SaveJsonString(string objStr, string folderName, string fileName)
+    {
+		string path = Path.Combine(savePath, folderName, fileName + ".json");
+		string directory = Path.GetDirectoryName(path);
+		if (!Directory.Exists(directory)) Directory.CreateDirectory(directory);
+		File.WriteAllText(path, objStr);
 	}
 
 }

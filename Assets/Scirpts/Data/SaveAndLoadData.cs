@@ -33,7 +33,7 @@ public class SaveAndLoadData
 	/// <param name="recordName"></param>
 	public static void SaveData<T>(T obj,string recordName,string fileName)
 	{
-		JsonTool.SaveDataByJsonUtility(obj, recordName, fileName);
+		JsonTool.SaveDataByLitJson(obj, recordName, fileName);
 	}
 
 }

@@ -18,15 +18,38 @@ public class Informations: BaseManager<Informations>
     public General[] Generals { get => generals; }
 
 
+	/// <summary>
+	/// 保存游戏数据
+	/// </summary>
+	/// <param name="name"></param>
+	public void SaveData(string name)
+    {
+		SaveAndLoadData.SaveData<King[]>(kings, name, "kings");
+		SaveAndLoadData.SaveData<City[]>(citys, name, "citys");
+		SaveAndLoadData.SaveData<General[]>(generals, name, "generals");
+	}
+
+	
+
     /// <summary>
     /// 加载mod数据
     /// </summary>
     /// <param name="modName"></param>
-    public void LoadData(string modFolder)
+    public void LoadData(string modFolder,bool fromRecord = false)
 	{
-		kings = SaveAndLoadData.LoadModData<King[]>(modFolder, "kings");
-		citys = SaveAndLoadData.LoadModData<City[]>(modFolder, "citys");
-		generals = SaveAndLoadData.LoadModData<General[]>(modFolder, "generals");
+		if (fromRecord)
+        {
+			kings = SaveAndLoadData.LoadRecordData<King[]>(modFolder, "kings");
+			citys = SaveAndLoadData.LoadRecordData<City[]>(modFolder, "citys");
+			generals = SaveAndLoadData.LoadRecordData<General[]>(modFolder, "generals");
+		}
+        else
+        {
+			kings = SaveAndLoadData.LoadModData<King[]>(modFolder, "kings");
+			citys = SaveAndLoadData.LoadModData<City[]>(modFolder, "citys");
+			generals = SaveAndLoadData.LoadModData<General[]>(modFolder, "generals");
+		}
+		
 		//更新城市内的武将列表
 		for(int i = 0; i < Generals.Length; ++i)
 		{
