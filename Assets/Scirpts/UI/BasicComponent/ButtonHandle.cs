@@ -98,4 +98,12 @@ public class ButtonHandle : MonoBehaviour
 	{
 		SelectKingControl.Instance.LoadModeData(btnIndex);
 	}
+
+	/// <summary>
+	/// 更新将军信息
+	/// </summary>
+	public void GeneralSelectBtnClick()
+	{
+		GeneralListPanelManager.Instance.ShowGeneralInfo(btnIndex);
+	}
 }

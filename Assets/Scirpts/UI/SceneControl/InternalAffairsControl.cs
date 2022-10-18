@@ -12,6 +12,9 @@ public class InternalAffairsControl : MonoBehaviour
 
 	public GameObject MainPanel;
 	public GameObject SelectKingPanel;
+	public GameObject GeneralsPanel;
+	public GameObject GeneralListPanel;
+	public GameObject GeneralPanel;
 
 	public KingInfoPanelManager kingInfoUI;
 	public Text Year;
@@ -27,8 +30,11 @@ public class InternalAffairsControl : MonoBehaviour
 
 	private Stack<GameObject> OpenUIStack = new Stack<GameObject>();
 
+    private static InternalAffairsControl instance;
 
-	private void Update()
+    public static InternalAffairsControl Instance { get => instance; set => instance = value; }
+
+    private void Update()
 	{
 		if (Input.GetMouseButtonDown(1) && OpenUIStack.Count>0)
 		{
@@ -38,6 +44,7 @@ public class InternalAffairsControl : MonoBehaviour
 
 	private void Awake()
 	{
+		instance = this;
 		if (Informations.Instance.Kings == null)
 		{
 			Informations.Instance.LoadData("Record1",true);
@@ -47,6 +54,7 @@ public class InternalAffairsControl : MonoBehaviour
 		ReturnToStartBtn.onClick.AddListener(BackToStartScene);
 		SaveBtn.onClick.AddListener(OpenSaveUI);
 		MapBtn.onClick.AddListener(OpenMap);
+		GeneralBtn.onClick.AddListener(ShowGenerals);
 		ShowKingInfo(Informations.Instance.PlayerKingIndex);
 	}
 
@@ -76,6 +84,31 @@ public class InternalAffairsControl : MonoBehaviour
 		ReturnBtn.gameObject.SetActive(true);
 		OpenUIStack.Push(SelectKingPanel);
 		LoadSceneObj.GetComponent<LoadScene>().ShowNewUI(SelectKingPanel);
+	}
+
+	/// <summary>
+	/// 打开将军列表
+	/// </summary>
+	void ShowGenerals()
+	{
+		MainPanel.SetActive(false);
+		GeneralPanel.SetActive(false);
+		GeneralListPanel.SetActive(true);
+		LoadSceneObj.SetActive(true);
+		ReturnBtn.gameObject.SetActive(true);
+		OpenUIStack.Push(GeneralsPanel);
+		LoadSceneObj.GetComponent<LoadScene>().ShowNewUI(GeneralsPanel);
+	}
+
+	/// <summary>
+	/// 打开将军详情
+	/// </summary>
+	public void ShowGeneral()
+	{
+		GeneralListPanel.SetActive(false);
+		LoadSceneObj.SetActive(true);
+		OpenUIStack.Push(GeneralPanel);
+		LoadSceneObj.GetComponent<LoadScene>().ShowNewUI(GeneralPanel);
 	}
 
 	/// <summary>
